@@ -7,7 +7,37 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  background-color: #282c34;
+  color: white;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.Tile {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-size: 20px;
+  background-color: #3f434b;
+  border: 2px solid gold;
+  margin: 10px;
+}
+
+button {
+  background-color: #2f333b;
+  border: 1px solid gold;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+button:disabled {
+  background-color: lightslategray;
+  border: 1px solid black;
+  color: black;
 }

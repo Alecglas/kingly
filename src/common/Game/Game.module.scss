@@ -1,0 +1,12 @@
+.Game {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.resourceContainer {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  right: 0;
+}
