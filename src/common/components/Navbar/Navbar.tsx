@@ -26,7 +26,12 @@ const Navbar = (props: NavbarProps) => {
 
     return (
         <div className={styles.Navbar}>
-            <div className="Tile" onClick={() => changeView('home')}>KING</div>
+            <div
+                className="Tile"
+                onClick={() => changeView('home')}
+            >
+                KING {G.king.name}
+            </div>
             {getSkills()}
         </div>
 

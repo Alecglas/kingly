@@ -1,6 +1,9 @@
 import Resource from "./classes/resource";
 import Building from "./classes/building";
 import Skill from "./classes/skills";
+import King from "./classes/king";
+
+export const king: King = new King();
 
 export const skills: Array<Skill> = [
     new Skill("woodcutting"),
@@ -32,6 +35,7 @@ export const resources: Array<Resource> = [
 export const buildings: Array<Building> = [
     new Building({
         id: "lumber",
+        cap: 5,
         cost: [
             {
                 id: "wood",
@@ -51,6 +55,7 @@ export const buildings: Array<Building> = [
     }),
     new Building({
         id: "quarry",
+        cap: 5,
         cost: [
             {
                 id: "stone",

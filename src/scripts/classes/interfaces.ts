@@ -1,5 +1,9 @@
-export interface IResource {
+export interface ICost {
     id: string
-    cap?: number
-    amount?: number
+    amount: number
+}
+
+export interface IProduction {
+    id: string
+    amount: number
 }

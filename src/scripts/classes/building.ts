@@ -1,18 +1,18 @@
-import { IResource } from "./interfaces";
+import {ICost, IProduction} from "./interfaces";
 
 export default class Building {
     id: string = "";
     owned: number = 0;
-    cost: Array<IResource> = [];
-    eff: number = 1;
-    mult: number = 1;
-    production: Array<IResource> = [];
+    cap: number = 0;
+    cost: Array<ICost> = [];
+    production: Array<IProduction> = [];
 
 
     constructor(config: {
         id: string,
-        cost: Array<IResource>,
-        production: Array<IResource>
+        cap: number,
+        cost: Array<ICost>,
+        production: Array<IProduction>
     }) {
         Object.assign(this,config)
     }

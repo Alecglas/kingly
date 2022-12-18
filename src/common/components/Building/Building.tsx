@@ -27,7 +27,7 @@ const Building = (props: BuildingProps) => {
     const printCost = () => {
         let costs = []
         for(let cost of B.cost){
-            const amount = cost.amount?.toFixed(0)
+            const amount = cost.amount.toFixed(0)
             costs.push(
                 <div key={cost.id}>
                     {amount} {cost.id}
@@ -44,8 +44,7 @@ const Building = (props: BuildingProps) => {
             <b>{B.id}</b>
 
             <div>
-                {B.owned.toFixed(0)} |
-                x{(B.eff*B.mult).toFixed(2)}
+                {B.owned.toFixed(0)} / {B.cap}
             </div>
 
             <div>
@@ -53,7 +52,7 @@ const Building = (props: BuildingProps) => {
             </div>
 
             <button>
-                Purchase
+                Build
             </button>
 
             <div>
