@@ -1,12 +1,14 @@
+import { resources, buildings, skills } from "./game-data";
 import Resource from "./classes/resource";
 import Building from "./classes/building";
-import { resources, buildings } from "./game-data";
+import Skill from "./classes/skills";
 
 
 export default class KingGame {
     time: number = 0;
     resources: Array<Resource> = resources;
     buildings: Array<Building> = buildings;
+    skills: Array<Skill> = skills;
 
 
     gameLoop = (frameTime: number) => {

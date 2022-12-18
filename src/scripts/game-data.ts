@@ -1,6 +1,11 @@
 import Resource from "./classes/resource";
 import Building from "./classes/building";
-import {IResource} from "./classes/interfaces";
+import Skill from "./classes/skills";
+
+export const skills: Array<Skill> = [
+    new Skill("woodcutting"),
+    new Skill("mining")
+]
 
 export const resources: Array<Resource> = [
     new Resource({
