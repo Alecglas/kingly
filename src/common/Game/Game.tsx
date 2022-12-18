@@ -5,6 +5,8 @@ import KingGame from "../../scripts/game";
 import Building from "../components/Building/Building";
 import Resource from "../components/Resource/Resource";
 import Navbar from "../components/Navbar/Navbar";
+import Mining from "../pages/Mining/Mining";
+import Woodcutting from "../pages/Woodcutting/Woodcutting";
 
 type GameProps = {
 
@@ -16,6 +18,7 @@ export const GameContext = createContext({
 
 const Game = (props: GameProps) => {
     const [ignored, forceUpdate] = useReducer(x => x+1, 0);
+    const [view, changeView] = useState('woodcutting');
     const { G } = useContext(GameContext)
 
     useEffect(() => {
@@ -27,12 +30,24 @@ const Game = (props: GameProps) => {
         requestAnimationFrame(frame)
     })
 
+    const renderView = () => {
+        switch(view){
+            case 'woodcutting':
+                return <Woodcutting/>
+            case 'mining':
+                return <Mining/>
+        }
+    }
+
 
     return(
         <div className={styles.Game}>
-            <Navbar/>
+            <Navbar changeView={changeView}/>
             <div className={styles.resourceContainer}>
                 {G.resources.map((r) => <Resource R={r}/>)}
+            </div>
+            <div className="Tile">
+                {renderView()}
             </div>
             <div>
                 {G.buildings.map((b) => <Building B={b}/>)}
